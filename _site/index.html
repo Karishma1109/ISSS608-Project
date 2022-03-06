@@ -2384,7 +2384,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><p><strong>Comparative Analysis</strong>: This will be used as an extension of the descriptive analysis done in the first step. It will provide the users with visual aids such as slope charts and columnar line/bar plots to compare the trading volumes/rate of change in (import/export) trade for the trading partners of Singapore. The users will be able to add/remove markets they want to compare and look at across selected time-intervals.</p></li>
 <li><p><strong>Time-Series Clustering</strong>: The objective of this technique is to look for time series trading patterns among the trading markets of Singapore. Dynamic Time Warping (DTW) distance time-series clustering techniques will be explored along with other traditional clustering techniques such as hierarchical clustering for their suitability to this use-case. The users will have the option to select the markets to cluster along with the clustering technique of their choice, the number of clusters they want to see and also an option to select the method and distance used in clustering. The interface will also suggest the optimal number of clusters for the selected markets based on the “Elbow Method” or the “Average Silhouette Approach”.</p></li>
 </ol>
+<p>Time series clustering using Dynamic Time Warping distance and its corresponding lower bounds. Implementations of partitional, hierarchical, fuzzy, k-Shape and TADPole clustering are available. Functionality can be easily extended with custom distance measures and centroid definitions. Implementations of DTW barycenter averaging, a distance based on global alignment kernels, and the soft-DTW distance and centroid routines are also provided. All included distance functions have custom loops optimized for the calculation of cross-distance matrices, including parallelization support. Several cluster validity indices are included.</p>
 <h1 id="storyboard">5. Storyboard</h1>
+<p>A view of the proposed Descriptive Analysis of Singapore’s Trade Data using R Shiny app is given below.</p>
+<figure>
+<img src="storyboard.bmp" alt="Descriptive Analysis Storyboard" /><figcaption aria-hidden="true">Descriptive Analysis Storyboard</figcaption>
+</figure>
 <h1 id="tools-packages">6. Tools &amp; Packages</h1>
 <ul>
 <li><p><em>Shiny</em>: To create the interactive shiny web application to fulfill the objectives of this project.</p></li>
@@ -2393,11 +2398,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><p><em>ggthemes</em>: to use different theme functions for the plots.</p></li>
 </ul>
 <h1 id="members">7. Members</h1>
-<p>Farah Foo – [profile here](</p>
+<p>Farah Foo – <a href="https://farahfoo.netlify.app/">profile here</a></p>
 <p>Karishma Yadav – <a href="https://karishma-smu.netlify.app/">profile here</a></p>
-<p>Tan Yan Ru – [profile here](</p>
+<p>Tan Yan Ru – <a href="https://yanrutanfirstsite.netlify.app/">profile here</a></p>
 <h1 id="references">8. References</h1>
-<p><a href="https://oec.world/en/profile/country/sgp" class="uri">https://oec.world/en/profile/country/sgp</a> <a href="https://www.mti.gov.sg/-/media/MTI/Resources/Economic-Survey-of-Singapore/2019/Economic-Survey-of-Singapore-First-Quarter-2019/FA_1Q19.pdf" class="uri">https://www.mti.gov.sg/-/media/MTI/Resources/Economic-Survey-of-Singapore/2019/Economic-Survey-of-Singapore-First-Quarter-2019/FA_1Q19.pdf</a></p>
+<ol type="1">
+<li><a href="https://oec.world/en/profile/country/sgp">OEC website</a></li>
+<li>Economic Survey of Singapore</li>
+</ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
