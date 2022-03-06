@@ -1,0 +1,21 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-03-06T18:07:12+08:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Project: Visual Analytics on Singapore Merchandise Trade",
+      "description": "This is the Group 4 project website for the module \"Visual Analytics and Applications\" for the session 2021-2022 at the Singapore Management University. The project aims to use descriptive analysis, trend analysis and timeseries clustering techniques to study merchandise trade of Singapore with other countries for the period Jan 2018 (pre-covid) to Jan 2022 (post-covid) to find interesting insights on trade during the pandemic.\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-03-06T18:42:10+08:00"
+    }
+  ],
+  "collections": []
+}

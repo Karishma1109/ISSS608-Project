@@ -1,0 +1,83 @@
+---
+title: "ISSS608 Project Proposal: Visual Analytics on Singapore Merchandise Trade"
+description: |
+  This is the project proposal for the module *Visual Analytics* at the Singapore Management University.
+author:
+  - name: Farah Foo, Karishma Yadav, Yan Ru Tan
+    
+    
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web. 
+
+Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+
+```{r, echo = TRUE, warning = FALSE, message = FALSE}
+packages = c('rmarkdown','tidyverse')
+for(p in packages)
+{
+  if(!require(p,character.only = T))
+  {
+    install.packages(p)
+  }
+  library(p,character.only = T)
+}
+```
+
+```{r, echo = TRUE, warning = FALSE, message = FALSE}
+imports <- read_csv("data/SGImports.csv", skip = 9)
+imports <- imports[,c(0:50)]
+exports <- read_csv("data/SGExports.csv", skip = 9)
+exports <- exports[,c(0:50)]
+
+```
+
+```{r, echo = TRUE, warning = FALSE, message = FALSE}
+imports1 <- pivot_longer(
+  imports,
+  !`Data Series`,
+  names_to = "Time",
+  values_to = "Imports"
+)
+view(imports1)
+```
+```{r, echo = TRUE, warning = FALSE, message = FALSE}
+exports1 <- pivot_longer(
+  exports,
+  !`Data Series`,
+  names_to = "Time",
+  values_to = "Exports"
+)
+```
+```{r, echo = TRUE, warning = FALSE, message = FALSE}
+imports2 <- imports1%>%
+  filter(`Data Series`=="Malaysia (Thousand Dollars)")
+imports2 <- imports2[order(as.Date(imports2$Time, format="%Y%m")),]
+view(imports2)
+```
+```{r, echo = TRUE, warning = FALSE, message = FALSE}
+ggplot(data=imports2, 
+       aes( x= Time, y= Imports, group=1)) +
+  geom_line(stat = "identity",
+  position = "identity") + geom_point() +
+  
+  labs(title = "Imports from Malaysia into Singapore for the period Jan 2018 to Jan 2022", 
+                     subtitle = "Noticable Fall in imports during", 
+                     x = 'Time', 
+                     y ='Import (Thousand Dollars)')+
+  theme_bw()+ 
+                      theme( plot.title = element_text(size=10), 
+                            plot.subtitle = element_text(size=9), axis.title = element_text(size=8, hjust=0.5), 
+                            axis.text.x=element_text(size=6, vjust=0.5, angle = 90),  axis.text.y=element_text(size=5, vjust=0.5))+
+  
+  scale_fill_manual(values=c("#A43876"))
+```
+
+
+

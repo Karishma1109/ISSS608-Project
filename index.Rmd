@@ -1,0 +1,15 @@
+---
+title: "Project: Visual Analytics on Singapore Merchandise Trade"
+description: |
+  This is the Group 4 project website for the module "Visual Analytics and Applications" for the session 2021-2022 at the Singapore Management University. The project aims to use descriptive analysis, trend analysis and timeseries clustering techniques to study merchandise trade of Singapore with other countries for the period Jan 2018 (pre-covid) to Jan 2022 (post-covid) to find interesting insights on trade during the pandemic.
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+```
+
