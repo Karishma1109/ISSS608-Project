@@ -20,6 +20,7 @@ This project aims to visually analyse the merchandise trading patterns of Singap
 The objective of this project to provide meaningful insights into the merchandise trade of Singapore during the pandemic through an interactive R Shiny application. It will be useful for the policy makers to identify how pandemics affect the trade and if required make appropriate decisions for their preparedness during such times, for the corporate sector to study the trading trends for their varied use-cases such as consulting etc., and for the common folks for their knowledge and awareness. 
 
 # 3. Data source and Overview
+
 The Singapore Merchandise trade by Region/Markets data is available at the [website](https://www.singstat.gov.sg/find-data/search-by-theme/trade-and-investment/merchandise-trade/latest-data) of Department of Statistics, Singapore. 
 
 A brief description of the data variables is given below:
@@ -34,6 +35,7 @@ A brief description of the data variables is given below:
 
 
 # 4. Proposed R Shiny App
+
 The interface will have a Home-page containing the major insights for the users to look at quickly for their convenience. It will have a sidebar panel containing 3 tabs for the 3 types of analyses explained below.
 We will explore the following visual analytic techniques to conduct the study:
 
@@ -66,6 +68,7 @@ Karishma Yadav – [profile here](https://karishma-smu.netlify.app/)
 Tan Yan Ru – [profile here](
 
 # 8. References
+
 https://oec.world/en/profile/country/sgp
 https://www.mti.gov.sg/-/media/MTI/Resources/Economic-Survey-of-Singapore/2019/Economic-Survey-of-Singapore-First-Quarter-2019/FA_1Q19.pdf
 
