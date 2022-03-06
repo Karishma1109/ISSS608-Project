@@ -59,11 +59,12 @@ exports1 <- pivot_longer(
 imports2 <- imports1%>%
   filter(`Data Series`=="Malaysia (Thousand Dollars)")
 imports2 <- imports2[order(as.Date(imports2$Time, format="%Y%m")),]
-view(imports2)
+time_order <- unique(imports2$Time)
+imports2$Time <- factor(imports2$Time, levels = time_order, ordered = TRUE)
 ```
 ```{r, echo = TRUE, warning = FALSE, message = FALSE}
 ggplot(data=imports2, 
-       aes( x= Time, y= Imports, group=1)) +
+       aes( x= fct_rev(Time), y= Imports, group=1)) +
   geom_line(stat = "identity",
   position = "identity") + geom_point() +
   
