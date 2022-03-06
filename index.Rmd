@@ -44,10 +44,9 @@ We will explore the following visual analytic techniques to conduct the study:
 2. **Comparative Analysis**: This will be used as an extension of the descriptive analysis done in the first step. It will provide the users with visual aids such as slope charts and columnar line/bar plots to compare the trading volumes/rate of change in (import/export) trade for the trading partners of Singapore. The users will be able to add/remove markets they want to compare and look at across selected time-intervals.
 
 3. **Time-Series Clustering**: The objective of this technique is to look for time series trading patterns among the trading markets of Singapore. Dynamic Time Warping (DTW) distance time-series clustering techniques will be explored along with other traditional clustering techniques such as hierarchical clustering for their suitability to this use-case. The users will have the option to select the markets to cluster along with the clustering technique of their choice, the number of clusters they want to see and also an option to select the method and distance used in clustering. The interface will also suggest the optimal number of clusters for the selected markets based on the "Elbow Method" or the "Average Silhouette Approach".
+In time series analysis, dynamic time warping (DTW) is an algorithm for measuring similarity between two temporal sequences, which may vary in speed.
 
 ![Illustration of Dynamic Time-series Warping](dtw_path.webm){width=70%}
-
-
 
 
 # 5. Storyboard
