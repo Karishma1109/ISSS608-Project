@@ -2350,47 +2350,53 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#objective">Objective</a></li>
-<li><a href="#proposed-r-shiny-app">Proposed R Shiny App</a></li>
-<li><a href="#storyboard">Storyboard</a></li>
-<li><a href="#tools-packages">Tools &amp; Packages</a></li>
-<li><a href="#members">Members</a></li>
-<li><a href="#references">References</a></li>
+<li><a href="#overview">1. Overview</a></li>
+<li><a href="#objective">2. Objective</a></li>
+<li><a href="#data-source-and-overview">3. Data source and Overview</a></li>
+<li><a href="#proposed-r-shiny-app">4. Proposed R Shiny App</a></li>
+<li><a href="#storyboard">5. Storyboard</a></li>
+<li><a href="#tools-packages">6. Tools &amp; Packages</a></li>
+<li><a href="#members">7. Members</a></li>
+<li><a href="#references">8. References</a></li>
 </ul>
 </nav>
 </div>
-<h1 id="overview">Overview</h1>
+<h1 id="overview">1. Overview</h1>
 <p>The global economy was heavily impacted in 2020 to 2021 due to the lock downs, as people saw unprecedented disruption of daily lives. Based on the World Trade organisation report press release in Oct 2021 <a href="https://www.wto.org/english/news_e/pres21_e/pr889_e.htm">here</a>, the World merchandise trade volume sank below 2015 levels in Q1 2020 and this observation applied to all the countries in all regions across the globe.</p>
-<p>Singapore trades with more than a hundred countries and is one of the most trade-dependent economy globally. As a comparatively small and open economy, movements in demand and supply will critically impact the import-export balance it has established for itself as a major trading hub. For the past 10 years, Singapore’s trade balance (the value of exports minus the value of imports) has been in surplus, even during the COVID years in 2020 and 2021. As at 2021, the country’s major trading partner is China, followed by Hong Kong.(<em><a href="https://www.mti.gov.sg/Resources/Economic-Survey-of-Singapore/2021/Economic-Survey-of-Singapore-Third-Quarter-2021">Source</a>: The Economic Survey of Singapore 2021</em>) To study the granular details of the import and export flow of import-export markets of Singapore, the project conducts a visual analytics on the merchandise trade data released by the Department of Statistics, Singapore.</p>
-<h1 id="objective">Objective</h1>
+<p>Singapore trades with more than a hundred countries and is one of the most trade-dependent economy globally. As a comparatively small and open economy, movements in demand and supply will critically impact the import-export balance it has established for itself as a major trading hub. For the past 10 years, Singapore’s trade balance (the value of exports minus the value of imports) has been in surplus, even during the COVID years in 2020 and 2021. As at 2021, the country’s major trading partner is China, followed by Hong Kong.(<em><a href="https://www.mti.gov.sg/Resources/Economic-Survey-of-Singapore/2021/Economic-Survey-of-Singapore-Third-Quarter-2021">Source</a>: The Economic Survey of Singapore 2021</em>)</p>
+<p>To study the granular details of the import and export flow of import-export markets of Singapore, the project conducts a visual analytics on the merchandise trade data released by the Department of Statistics, Singapore.</p>
+<h1 id="objective">2. Objective</h1>
 <p>This project aims to visually analyse the merchandise trading patterns of Singapore with various markets for the time period Jan 2018 to Jan 2022 using the R-Shiny Interface. The period in this study encompasses the pandemic called COVID-19 which onset in late 2019 forcing economies to lock-down in early 2020 and then gradually opening at different times.</p>
 <p>The objective of this project to provide meaningful insights into the merchandise trade of Singapore during the pandemic through an interactive R Shiny application. It will be useful for the policy makers to identify how pandemics affect the trade and if required make appropriate decisions for their preparedness during such times, for the corporate sector to study the trading trends for their varied use-cases such as consulting etc., and for the common folks for their knowledge and awareness.</p>
-<p>#Data source and Overview The Singapore Merchandise trade by Region/Markets data is available at the <a href="https://www.singstat.gov.sg/find-data/search-by-theme/trade-and-investment/merchandise-trade/latest-data">website</a> of Department of Statistics, Singapore.</p>
+<h1 id="data-source-and-overview">3. Data source and Overview</h1>
+<p>The Singapore Merchandise trade by Region/Markets data is available at the <a href="https://www.singstat.gov.sg/find-data/search-by-theme/trade-and-investment/merchandise-trade/latest-data">website</a> of Department of Statistics, Singapore.</p>
 <p>A brief description of the data variables is given below:</p>
-<p>Market: The trading market of Singapore<br />
-Time: The time is given in Month-Year format.<br />
-Import (SGD value in Thousands): Refers to all goods brought into Singapore, irrespective of whether they are for consumption, for processing, for use in manufacturing, or for subsequent re-shipment to other countries.<br />
-Export (SGD value in Thousands): Refers to all goods taken out of Singapore, which includes domestic exports and re-exports. All dollar values are shown in Singapore dollars</p>
-<h1 id="proposed-r-shiny-app">Proposed R Shiny App</h1>
-<p>The interface will have a Home-page containing the major insights for the users to look at quickly for their convenience. It will have a sidebar panel containing 3 tabs for the 3 types of analyses explained below. We will explore the following visual analytic techniques to conduct the study: 1. Descriptive Analytics: To display the import and export volumes of Singapore with its trading partners over the years. In this section, the interface will enable the users to select the import/export market of their choice through interactive query boxes and select the time-interval they want to study through the use of sliders. Other than absolute trading volume numbers, the interface also proposes for the users to visually look the rate of change of import and export values over the time frame mentioned. Additionally, the interface will enable the users to also look the balance of merchandise trade for Singapore with these trading partners for their selected time-interval.</p>
-<ol start="2" type="1">
-<li><p>Comparative Analysis: This will be used as an extension of the descriptive analysis done in the first step. It will provide the users with visual aids such as slope charts and columnar line/bar plots to compare the trading volumes/rate of change in (import/export) trade for the trading partners of Singapore. The users will be able to add/remove markets they want to compare and look at across selected time-intervals.</p></li>
-<li><p>Time-Series Clustering: The objective of this technique is to look for time series trading patterns among the trading markets of Singapore. Dynamic Time Warping (DTW) distance time-series clustering techniques will be explored along with other traditional clustering techniques such as hierarchical clustering for their suitability to this use-case. The users will have the option to select the markets to cluster along with the clustering technique of their choice, the number of clusters they want to see and also an option to select the method and distance used in clustering. The interface will also suggest the optimal number of clusters for the selected markets based on the “Elbow Method” or the “Average Silhouette Approach”.</p></li>
-</ol>
-<h1 id="storyboard">Storyboard</h1>
-<h1 id="tools-packages">Tools &amp; Packages</h1>
 <ul>
-<li><p>Shiny</p></li>
-<li><p>Tidyverse</p></li>
-<li><p>ggplot2</p></li>
-<li><p>dtwclust</p></li>
+<li><p>Market: The trading market of Singapore</p></li>
+<li><p>Time: The time is given in Month-Year format.</p></li>
+<li><p>Import (SGD value in Thousands): Refers to all goods brought into Singapore, irrespective of whether they are for consumption, for processing, for use in manufacturing, or for subsequent re-shipment to other countries.</p></li>
+<li><p>Export (SGD value in Thousands): Refers to all goods taken out of Singapore, which includes domestic exports and re-exports. All dollar values are shown in Singapore dollars</p></li>
 </ul>
-<h1 id="members">Members</h1>
+<h1 id="proposed-r-shiny-app">4. Proposed R Shiny App</h1>
+<p>The interface will have a Home-page containing the major insights for the users to look at quickly for their convenience. It will have a sidebar panel containing 3 tabs for the 3 types of analyses explained below. We will explore the following visual analytic techniques to conduct the study:</p>
+<ol type="1">
+<li><p><strong>Descriptive Analytics</strong>: To display the import and export volumes of Singapore with its trading partners over the years. In this section, the interface will enable the users to select the import/export market of their choice through interactive query boxes and select the time-interval they want to study through the use of sliders. Other than absolute trading volume numbers, the interface also proposes for the users to visually look the rate of change of import and export values over the time frame mentioned. Additionally, the interface will enable the users to also look the balance of merchandise trade for Singapore with these trading partners for their selected time-interval.</p></li>
+<li><p><strong>Comparative Analysis</strong>: This will be used as an extension of the descriptive analysis done in the first step. It will provide the users with visual aids such as slope charts and columnar line/bar plots to compare the trading volumes/rate of change in (import/export) trade for the trading partners of Singapore. The users will be able to add/remove markets they want to compare and look at across selected time-intervals.</p></li>
+<li><p><strong>Time-Series Clustering</strong>: The objective of this technique is to look for time series trading patterns among the trading markets of Singapore. Dynamic Time Warping (DTW) distance time-series clustering techniques will be explored along with other traditional clustering techniques such as hierarchical clustering for their suitability to this use-case. The users will have the option to select the markets to cluster along with the clustering technique of their choice, the number of clusters they want to see and also an option to select the method and distance used in clustering. The interface will also suggest the optimal number of clusters for the selected markets based on the “Elbow Method” or the “Average Silhouette Approach”.</p></li>
+</ol>
+<h1 id="storyboard">5. Storyboard</h1>
+<h1 id="tools-packages">6. Tools &amp; Packages</h1>
+<ul>
+<li><p><em>Shiny</em>: To create the interactive shiny web application to fulfill the objectives of this project.</p></li>
+<li><p><em>Tidyverse</em>: To use functions to import, tidy, manipulate and visualize the data.</p></li>
+<li><p><em>dtwclust</em>: To use Dynamic Time Warping distance time-series clustering function.</p></li>
+<li><p><em>ggthemes</em>: to use different theme functions for the plots.</p></li>
+</ul>
+<h1 id="members">7. Members</h1>
 <p>Farah Foo – [profile here](</p>
-<p>Karishma Yadav – [profile here](</p>
+<p>Karishma Yadav – <a href="https://karishma-smu.netlify.app/">profile here</a></p>
 <p>Tan Yan Ru – [profile here](</p>
-<h1 id="references">References</h1>
+<h1 id="references">8. References</h1>
 <p><a href="https://oec.world/en/profile/country/sgp" class="uri">https://oec.world/en/profile/country/sgp</a> <a href="https://www.mti.gov.sg/-/media/MTI/Resources/Economic-Survey-of-Singapore/2019/Economic-Survey-of-Singapore-First-Quarter-2019/FA_1Q19.pdf" class="uri">https://www.mti.gov.sg/-/media/MTI/Resources/Economic-Survey-of-Singapore/2019/Economic-Survey-of-Singapore-First-Quarter-2019/FA_1Q19.pdf</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
