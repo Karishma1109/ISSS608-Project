@@ -45,7 +45,7 @@ imports1 <- pivot_longer(
   names_to = "Time",
   values_to = "Imports"
 )
-view(imports1)
+
 ```
 ```{r, echo = TRUE, warning = FALSE, message = FALSE}
 exports1 <- pivot_longer(
@@ -54,6 +54,7 @@ exports1 <- pivot_longer(
   names_to = "Time",
   values_to = "Exports"
 )
+
 ```
 ```{r, echo = TRUE, warning = FALSE, message = FALSE}
 imports2 <- imports1%>%
