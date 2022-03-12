@@ -66,6 +66,8 @@ A view of the proposed Descriptive Analysis of Singapore's Trade Data using R Sh
 
 - *ggthemes*: to use different theme functions for the plots.
 
+- *tidygraph*: to use for any network visualisation
+
 # 7. Members
 
 Farah Foo – [profile here](https://farahfoo.netlify.app/)
