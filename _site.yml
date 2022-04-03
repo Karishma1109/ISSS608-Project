@@ -5,7 +5,10 @@ description: |
 theme: theme.css
 output_dir: "_site"
 navbar:
-    - text: "Group Project"
+    right:
+    - text: "Project Proposal"
+      href: "Project_Proposal.html"
+      theme: "theme.css"
       
 output: 
     distill::distill_article:
