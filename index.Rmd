@@ -14,20 +14,27 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 # ABSTRACT
-
+The COVID-19 pandemic forced countries world over to close their borders, affecting the overall global trade. Singapore being the entrepot for world's import and export was impacted too. The aim of this project is to provide users with an interactive application interface to facilitate their exploration of trade patterns of Singapore with its trading partner countries. The time period was carefully chosen to correspond to pre-,during and post COVID lockdown of countries. The application is the solution to provide an introductory exploration for the users to observe the general overall patterns of total trade for Singapore over the time-period Jan 2018 to Jan 2022, followed by trends for 4 important merchandise trade measures - Import, Export, Net Imports/ Balance of Trade and Trade Volume over the time period. It also facilitates cross-country comparisons across these measures for the same time-period. Additionally, the app also provides the users to view to 10 top trading partners across the 4 measures and see the trading partners topping the charts for Singapore. The application also provides users to see time-series clustering patterns for the countries and see patterns in how they behaved during this period. Overall trade for Singapore took its sharpest fall in May 2020. Mainland China, Malaysia, USA and Taiwan remained its top trade partners despite the lockdown. Their respective ranks across various trade measures did change but they managed to remained in top 10 across all trade measures across the time-period under study, Jan 2018 to Jan 2022.
 
 # TEAM
 
 
+- Farah Foo - [view profile](https://www.linkedin.com/in/farahfoo/)
 
-#PROJECT DELIVERABLES
+- Karishma Yadav - [view profile](https://www.linkedin.com/in/karishma-yadav-02310a168/)
+
+- Tan Yan Ru - [view profile](https://www.linkedin.com/in/yanrutan11/)
+
+
+# PROJECT DELIVERABLES
 
 1. Website - [SingTrade Compass - Partners through the Pandemic](https://1109karishma.shinyapps.io/singtradecompass/)
 
-2. [Application User Guide]()
+2. Explore the App - [Application User Guide](https://github.com/Karishma1109/ISSS608-Project/blob/master/G4_Final_Deliverables/App%20User%20Guide.pdf)
 
-3. [Project Poster]()
+3. Project in one place - [Project Poster](https://github.com/Karishma1109/ISSS608-Project/blob/master/G4_Final_Deliverables/Poster.pdf)
 
-4. [Project Management - Minutes of the Meetings]()
+4. Project Management - [Minutes of the Meetings](https://github.com/Karishma1109/ISSS608-Project/blob/master/G4_Final_Deliverables/Minutes%20of%20Meetings.pdf)
 
-5. [Artifacts - Codes]()
+5. R & R Shiny Codes - [Artifacts](https://github.com/Karishma1109/ISSS608-Project/tree/master/G4_Final_Deliverables/app)
+
