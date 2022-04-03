@@ -32,7 +32,7 @@ The COVID-19 pandemic forced countries world over to close their borders, affect
 
 2. Explore the App - [Application User Guide](https://github.com/Karishma1109/ISSS608-Project/blob/master/G4_Final_Deliverables/App%20User%20Guide.pdf)
 
-3. Project in one place - [Project Poster](https://github.com/Karishma1109/ISSS608-Project/blob/master/G4_Final_Deliverables/Poster.pdf)
+3. Single view of the Project - [Project Poster](https://github.com/Karishma1109/ISSS608-Project/blob/master/G4_Final_Deliverables/Poster.pdf)
 
 4. Project Management - [Minutes of the Meetings](https://github.com/Karishma1109/ISSS608-Project/blob/master/G4_Final_Deliverables/Minutes%20of%20Meetings.pdf)
 
